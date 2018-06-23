@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formularios HTML5</title>
+</head>
+<body>
+	<main>
+		<!-- <h1>Formularios</h1>
+		<div>
+			es un elemento de html que nos permite enviar info al servidor mormalmente se utilezan en los login 
+			y usos varios onda registrar y demas
+		</div>
+		<div>
+			<p style="text-align: left;">
+				&lt; form method="post o get" action="una pag en html" &lt;<br> el get tiene 2 resticciones unpo es de max 500 mb y otrose necesita configurar el formulario
+				&lt; /form &lt;
+			</p>
+		</div>
+		<div>
+			<form method="GET" action="MiServidor.php">
+				<labelfor="nombre">nombre:</label> <input type="text" id="nombre" maxlength="10"> <br>
+				 method es para recibir, action es para lo que vas a definir, type es que se va a ingresar text es para texto comun password es para los *, id es el id que va a tener y el maxlength es para el maximo de caracteres
+				<labelfor="apellido">apellido:</label> <input type="text" id="apellido" maxlength="11"> <br>
+				<labelfor="password">password:</label> <input type="password" id="password" maxlength="12"><br>
+				<labelfor="chequear">checkbox:</label> <input type="checkbox" id="chequear">
+
+				<h4>Que te gusta hacer</h4>
+				<input type="checkbox" id="deporte">
+				<labelfor="deporte"> deporte</label>
+				<input type="checkbox" id="musica">
+				<labelfor="musica"> musica</label>
+
+				<h4>sexo</h4>
+
+				<input type="radio" name="sexo"><label>hombre</label><br>
+				<input type="radio" name="sexo"><label>mujer</label><br>
+
+				<labelfor="password"> edad </label>
+				<input type="number" id="edad">
+				<input type="button" id="boton">
+				<input type="reset" id="reset" value="reset">
+				<input type="submit" id="enviar" value="cargar">
+			</form>
+		</div>-->
+
+		<div>
+			<form method="GET" action="MiServidor.php">
+			<h3>Bienvenido a esta pagina, ingrese sus datos</h3>
+			<fieldset>
+				<legend>Informacion basica</legend>
+				<table> <!-- border="black" es para darle bordes -->
+					<tr>
+						<td>
+							<labelfor="nombre">nombre:</label>
+						</td>
+						<td>
+							<input type="text" id="nombre" maxlength="10">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<labelfor="apellido">apellido:
+						</td>
+						<td>
+							<input type="text" id="apellido" maxlength="10">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<labelfor="email">email:</label>
+						</td>
+						<td>
+							<input type="email" id="email"required placeholder="info@dominio.com">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<labelfor="password">password:</label>
+						</td>
+						<td>
+							 <input type="password" id="password" >
+						</td>
+					</tr>
+					<tr>
+						<td rowspan=""> <!-- rowspan es para qeu el texto quede centrado -->
+							<label>sexo:</label>
+						</td>
+						<td >
+							<input type="radio" name="sexo"><label>hombre</label>
+							<input type="radio" name="sexo"><label>mujer</label><br>
+							<input type="radio" name="sexo"><label>indefinido</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<labelfor="edad"> edad </label>
+						</td>
+						<td>
+							<input type="number" id="edad">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<labelfor="estadoCivil"> estado civil </label>
+						</td>
+						<td>
+							<select>
+								<option value="-----">-----</option>
+								<option value="casado">casado</option>
+								<option value="soltero">soltero</option>
+								<option value="viudo">viudo</option>
+								<option value="divorciado">divorciado</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Gustos</legend>
+				<label>cuales son sus hobbies?:</label><br>
+				<table>
+					<tr>
+						<td>
+							
+							<input type="checkbox" id="musica">
+							<labelfor="musica"> musica</label>
+						</td>
+						<td>
+							
+							<input type="checkbox" id="autos">
+							<labelfor="autos"> autos</label>
+						</td>
+						<td>
+							
+							<input type="checkbox" id="deportes">
+							<labelfor="deportes"> deportes</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" id="computacion">
+							<labelfor="computacion"> computacion</label
+						</td>
+						<td>
+							<input type="checkbox" id="dormir">
+							<labelfor="dormir"> dormir</label>
+						</td>
+						<td>
+							<input type="checkbox" id="pintura">
+							<labelfor="pintura"> pintura</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" id="escultura">
+							<labelfor="escultura"> escultura</label>
+						</td>
+						<td>
+							<input type="checkbox" id="culturismo">
+							<labelfor="culturismo"> culturismo</label>
+						</td>
+						<td>
+							<input type="checkbox" id="musica">
+							<labelfor="cocina"> cocina</label>
+						</td>
+					</tr>
+				</table>
+
+			</fieldset>
+			
+			
+			<fieldset>
+				<legend>Comentarios</legend>
+				<textarea style="height: 100px;width: 100%"></textarea><!-- el width con % usa el porcentaje de anchira de tu pantalla -->
+			</fieldset>
+			
+			<labelfor="chequear">acepta los terminos y condiciones?</label> <input type="checkbox" id="chequear"> <label>acepto</label>
+			<fieldset>
+				<form method="GET" action="MiServidor.php" enctype="multipart/from-data" >
+					<fieldset>
+						<legend> CV</legend>
+						<input type="file" name="">
+					</fieldset>
+				</form>
+			</fieldset>	<br>
+			<input type="submit" id="enviar" value="cargar">
+			<input type="reset" id="reset" value="reset">
+			
+		</div>
+	</main>
+</body>
+</html> <!-- tr es filas  td es columnas-->
